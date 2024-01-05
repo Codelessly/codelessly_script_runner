@@ -22,7 +22,9 @@ void main(List<String> args) async {
   }
 
   // Get all required params from command line
-  final Map<String, dynamic> params = jsonDecode(args[2]);
+  final paramsString = args[2];
+  print('Params: $paramsString');
+  final Map<String, dynamic> params = jsonDecode(paramsString);
 
   validateParams(params);
 
