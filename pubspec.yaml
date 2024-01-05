@@ -1,0 +1,15 @@
+name: codelessly_script_runner
+description: A Codelessly Script Runner for Updating repositories with starter template.
+
+version: 1.0.0
+
+environment:
+  sdk: ^3.2.3
+
+dependencies:
+  args: ^2.4.2
+  path: ^1.9.0
+  mustachex: ^1.0.0
+
+dev_dependencies:
+  lints: ^3.0.0
