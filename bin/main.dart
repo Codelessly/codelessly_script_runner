@@ -23,7 +23,7 @@ void main(List<String> args) async {
   }
 
   // Get all required params from command line
-  final paramsString = args[2];
+  final paramsString = utf8.decode(base64Decode(args[1]));
   print('Params: $paramsString');
   final Map<String, dynamic> params = jsonDecode(paramsString);
 
