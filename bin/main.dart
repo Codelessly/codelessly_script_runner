@@ -1,14 +1,13 @@
 import 'dart:convert';
 import 'dart:io';
 
-import 'runner.dart';
-import 'validator.dart';
+import 'package:codelessly_script_runner/runner.dart';
+import 'package:codelessly_script_runner/validator.dart';
 
 const String defaultProjectName = 'My Project';
 const String defaultProjectDescription = 'A new codelessly starter project';
 
 void main(List<String> args) async {
-  print('Called with args: $args');
   if (args.length != 2) {
     stderr.writeln('Required arguments not provided.');
     stderr.writeln('Usage: dart bin/main.dart <template-dir> <config_json>');

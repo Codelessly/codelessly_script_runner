@@ -6,15 +6,15 @@ import 'package:mustachex/mustachex.dart';
 import 'package:path/path.dart';
 
 Future<void> replaceAllMoustache(
-    Directory directory,
-    Map<String, dynamic> data,
-    ) async {
+  Directory directory,
+  Map<String, dynamic> data,
+) async {
   final Stopwatch stopwatch = Stopwatch()..start();
   stdout.writeln('Replacing all moustaches in ${directory.path}');
   final processor = MustachexProcessor(initialVariables: data);
 
   final List<FileSystemEntity> files =
-  await directory.list(recursive: true).toList();
+      await directory.list(recursive: true).toList();
 
   final length = files.length;
   stdout.writeln('About to process [$length] files.');
