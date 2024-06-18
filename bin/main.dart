@@ -28,8 +28,8 @@ void main(List<String> args) async {
 
   validateParams(params);
 
-  final String slug = params['slug']!;
   final String codelesslyAuthToken = params['authToken']!;
+  final String slug = params['slug'] ?? '';
   final String layoutID = params['layoutID'] ?? '';
   final String name = params['name'] ?? defaultProjectName;
   final String description = params['description'] ?? defaultProjectDescription;
