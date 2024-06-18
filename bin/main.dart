@@ -33,6 +33,8 @@ void main(List<String> args) async {
   final String layoutID = params['layoutID'] ?? '';
   final String name = params['name'] ?? defaultProjectName;
   final String description = params['description'] ?? defaultProjectDescription;
+  final String githubRepoOwner = params['repo_owner'] ?? '';
+  final String githubRepoName = params['repo_name'] ?? '';
 
   stdout.write('Replacing all moustaches...');
   await replaceAllMoustache(
@@ -43,6 +45,8 @@ void main(List<String> args) async {
       'authToken': codelesslyAuthToken,
       'slug': slug,
       'layoutID': layoutID,
+      'repo_owner': githubRepoOwner,
+      'repo_name': githubRepoName,
     },
   );
   stdout.write('Done!');
